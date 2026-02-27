@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -15,11 +14,6 @@
     --color-background: #F2F2F2;
     --color-text: #333333;
     --color-text-light: #666666;
-
-    --color-success: #28A745;
-    --color-error: #DC3545;
-    --color-warning: #FFC107;
-    --color-info: #17A2B8;
 
     --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
     --shadow-medium: 0 6px 18px rgba(0, 0, 0, 0.12);
@@ -80,6 +74,8 @@ main img {
     display: block;
 }
 
+/* ================= SERVIÇOS ================= */
+
 .servicos {
     padding: 80px 20px;
     text-align: center;
@@ -93,20 +89,25 @@ main img {
 }
 
 .servicos-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: stretch; /* força mesma altura */
 }
 
 .card {
     background: var(--color-white);
-    width: 340px;
     padding: 30px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-soft);
     border: 1px solid rgba(233, 30, 143, 0.1);
     transition: all 0.4s ease;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* garante altura igual */
 }
 
 .card:hover {
@@ -117,6 +118,8 @@ main img {
 
 .card img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-radius: var(--border-radius);
     margin-bottom: 20px;
 }
@@ -131,6 +134,10 @@ main img {
     font-size: 14px;
     color: var(--color-text-light);
     line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.card p:last-of-type {
     margin-bottom: 20px;
 }
 
@@ -144,6 +151,7 @@ main img {
     font-size: 14px;
     font-weight: 500;
     transition: 0.3s ease;
+    margin-top: auto; /* botão sempre embaixo */
 }
 
 .btn-agendar:hover {
@@ -151,21 +159,26 @@ main img {
     box-shadow: 0 6px 15px rgba(233, 30, 143, 0.35);
 }
 
-@media (max-width: 768px) {
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 992px) {
+    .servicos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .servicos-container {
+        grid-template-columns: 1fr;
+    }
+
     nav ul {
         flex-direction: column;
         gap: 20px;
     }
-
-    .servicos-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
-    }
 }
+
+/* ================= FOOTER ================= */
 
 .footer {
     background: var(--color-primary);
@@ -205,11 +218,6 @@ main img {
     text-decoration: none;
     color: var(--color-white);
     font-size: 14px;
-    transition: 0.3s;
-}
-
-.footer-links a:hover {
-    color: var(--color-primary-light);
 }
 
 .footer-bottom {
@@ -225,14 +233,4 @@ main img {
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
-}
-
-.footer a {
-    color: var(--color-white);
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.footer a:hover {
-    color: var(--color-primary-soft);
 }
