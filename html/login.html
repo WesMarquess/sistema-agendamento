@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="../styles/agendamento.css">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#servicos">Serviços</a></li>
+            <li><a href="agendamento.html">Agendamento</a></li>
+            <li><a href="sobre-nos.html">Sobre nós</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="form-container">
+        <h2 id="titulo-form">Fazer Login</h2>
+
+        <form id="form" class="formulario">
+
+            <div id="campo-nome" class="campo" style="display: none;">
+                <label>Nome</label>
+                <input type="text" id="input-nome" placeholder="Digite seu nome">
+            </div>
+
+            <div id="campo-telefone" class="campo" style="display: none;">
+                <label>Telefone</label>
+                <input type="tel" id="input-telefone" placeholder="Digite seu telefone">
+            </div>
+
+            <div class="campo">
+                <label>Email</label>
+                <input type="email" id="input-email" placeholder="Digite seu email" required>
+            </div>
+
+            <div class="campo">
+                <label>Senha</label>
+                <input type="password" id="input-senha" placeholder="Digite sua senha" required>
+            </div>
+
+            <button type="submit" id="botao-submit">Entrar</button>
+
+            <p>
+                <span id="texto-toggle">Não tem conta?</span>
+                <span id="toggle-mode" style="cursor:pointer; color: var(--color-primary); font-weight:600;">
+                    Criar conta
+                </span>
+            </p>
+
+        </form>
+    </div>
+</main>
+
+<script src="../login.js"></script>
+</body>
+
+</html>

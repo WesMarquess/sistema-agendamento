@@ -1,0 +1,104 @@
+/* ================= MENU PADRÃO GLOBAL ================= */
+
+:root {
+    --color-primary: #E91E8F;
+    --color-primary-dark: #D81B7B;
+    --color-white: #FFFFFF;
+
+    --font-size-small: 14px;
+    --nav-height: 40px;
+}
+
+header {
+    background: var(--color-white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 25px 0;
+    gap: 40px;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-primary);
+    font-size: var(--font-size-small);
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: var(--color-primary);
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--color-primary-dark);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+#menu-login {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#menu-login span {
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+}
+
+#menu-login .btn-logout {
+    height: 40px !important;
+    padding: 0 20px !important;
+    border-radius: 30px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    font-size: 14px !important;
+    font-weight: 600;
+
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+}
+
+#menu-login .btn-logout:hover {
+    background: var(--color-primary-dark);
+    box-shadow: 0 6px 15px rgba(233, 30, 143, 0.35);
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
