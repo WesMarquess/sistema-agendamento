@@ -11,7 +11,8 @@
     --color-primary-soft: #F8A1C4;
 
     --color-white: #FFFFFF;
-    --color-background: #F2F2F2;
+    --color-background: #F4F4F4;
+
     --color-text: #333333;
     --color-text-light: #666666;
 
@@ -19,52 +20,17 @@
     --shadow-medium: 0 6px 18px rgba(0, 0, 0, 0.12);
 
     --border-radius: 12px;
+
+    --font-size-base: 15px;
+    --font-size-small: 14px;
+    --font-size-title: 32px;
 }
 
 body {
     font-family: 'Poppins', Arial, sans-serif;
     background: linear-gradient(to bottom, var(--color-background), var(--color-white));
     color: var(--color-text);
-}
-
-header {
-    background: var(--color-white);
-    box-shadow: var(--shadow-soft);
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 25px 0;
-    gap: 40px;
-}
-
-nav a {
-    text-decoration: none;
-    font-weight: 600;
-    color: var(--color-primary);
-    position: relative;
-    transition: 0.3s ease;
-}
-
-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0%;
-    height: 2px;
-    background: var(--color-primary);
-    transition: 0.3s ease;
-}
-
-nav a:hover {
-    color: var(--color-primary-dark);
-}
-
-nav a:hover::after {
-    width: 100%;
+    font-size: var(--font-size-base);
 }
 
 main img {
@@ -74,15 +40,13 @@ main img {
     display: block;
 }
 
-/* ================= SERVIÇOS ================= */
-
 .servicos {
     padding: 80px 20px;
     text-align: center;
 }
 
 .servicos h2 {
-    font-size: 36px;
+    font-size: var(--font-size-title);
     color: var(--color-primary);
     margin-bottom: 60px;
     font-weight: 700;
@@ -94,7 +58,7 @@ main img {
     gap: 40px;
     max-width: 1100px;
     margin: 0 auto;
-    align-items: stretch; /* força mesma altura */
+    align-items: stretch;
 }
 
 .card {
@@ -104,14 +68,13 @@ main img {
     box-shadow: var(--shadow-soft);
     border: 1px solid rgba(233, 30, 143, 0.1);
     transition: all 0.4s ease;
-
     display: flex;
     flex-direction: column;
-    height: 100%; /* garante altura igual */
+    height: 100%;
 }
 
 .card:hover {
-    transform: translateY(-12px);
+    transform: translateY(-10px);
     box-shadow: var(--shadow-medium);
     border: 1px solid var(--color-primary-soft);
 }
@@ -128,12 +91,13 @@ main img {
     color: var(--color-primary-dark);
     margin-bottom: 15px;
     font-weight: 600;
+    font-size: 18px;
 }
 
 .card p {
-    font-size: 14px;
+    font-size: var(--font-size-small);
     color: var(--color-text-light);
-    line-height: 1.7;
+    line-height: 1.6;
     margin-bottom: 15px;
 }
 
@@ -142,24 +106,25 @@ main img {
 }
 
 .btn-agendar {
-    display: inline-block;
-    padding: 12px 28px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 0 24px;
     background: var(--color-primary);
     color: var(--color-white);
     border-radius: 30px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: var(--font-size-small);
     font-weight: 500;
     transition: 0.3s ease;
-    margin-top: auto; /* botão sempre embaixo */
+    margin-top: auto;
 }
 
 .btn-agendar:hover {
     background: var(--color-primary-dark);
     box-shadow: 0 6px 15px rgba(233, 30, 143, 0.35);
 }
-
-/* ================= RESPONSIVO ================= */
 
 @media (max-width: 992px) {
     .servicos-container {
@@ -171,19 +136,12 @@ main img {
     .servicos-container {
         grid-template-columns: 1fr;
     }
-
-    nav ul {
-        flex-direction: column;
-        gap: 20px;
-    }
 }
-
-/* ================= FOOTER ================= */
 
 .footer {
     background: var(--color-primary);
     color: var(--color-white);
-    padding: 60px 20px 20px 20px;
+    padding: 60px 20px 20px;
     margin-top: 80px;
 }
 
@@ -202,7 +160,7 @@ main img {
 }
 
 .footer p {
-    font-size: 14px;
+    font-size: var(--font-size-small);
     line-height: 1.6;
 }
 
@@ -217,7 +175,7 @@ main img {
 .footer-links a {
     text-decoration: none;
     color: var(--color-white);
-    font-size: 14px;
+    font-size: var(--font-size-small);
 }
 
 .footer-bottom {

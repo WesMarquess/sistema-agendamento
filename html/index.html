@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mulher Virtuosa</title>
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <nav>
-            <ul>
+            <ul id="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="agendamento.html">Agendamento</a></li>
-                <li><a href="sobre-nos.html">Sobre nós</a></li>
+                <li id="menu-login"><a href="login.html">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -32,65 +34,47 @@
                 <div class="card">
                     <img src="../img/manicure-jpg.jpeg" alt="Manicure">
                     <h3>Manicure</h3>
-                    <p>
-                        Cuidamos das suas unhas com carinho e atenção aos detalhes. Realizamos limpeza,
-                        corte, lixamento, cutilagem e esmaltação perfeita.
-                    </p>
-                    <a href="agendamento.html" class="btn-agendar">Agendar agora</a>
+                    <p>Cuidamos das suas unhas com carinho e atenção aos detalhes.</p>
+                    <a href="agendamento.html?servico=Manicure&valor=40" class="btn-agendar">Agendar agora</a>
                 </div>
 
                 <div class="card">
                     <img src="../img/service-pe.jpg" alt="Pedicure">
                     <h3>Pedicure</h3>
-                    <p>
-                        Tratamento completo para seus pés ficarem macios, saudáveis e impecáveis,
-                        incluindo hidratação e esmaltação profissional.
-                    </p>
-                    <a href="agendamento.html" class="btn-agendar">Agendar agora</a>
+                    <p>Tratamento completo para seus pés ficarem macios e saudáveis.</p>
+                    <a href="agendamento.html?servico=Pedicure&valor=50" class="btn-agendar">Agendar agora</a>
                 </div>
 
                 <div class="card">
                     <img src="../img/manicure-pedicure.jpeg" alt="Pé e mão">
                     <h3>Pé e Mão</h3>
-                    <p>
-                        Serviço completo de manicure e pedicure para unhas lindas e acabamento
-                        impecável.
-                    </p>
+                    <p>Serviço completo de manicure e pedicure.</p>
                     <p>Pix: R$ 65,00</p>
-                    <a href="agendamento.html" class="btn-agendar">Agendar agora</a>
+                    <a href="agendamento.html?servico=Pe%20e%20Mao&valor=65" class="btn-agendar">Agendar agora</a>
                 </div>
 
                 <div class="card">
                     <img src="../img/escova.jpg" alt="Escova">
                     <h3>Escova</h3>
-                    <p>
-                        Cabelos alinhados, com brilho e movimento natural. Ideal para o dia a dia
-                        ou ocasiões especiais.
-                    </p>
+                    <p>Cabelos alinhados, com brilho e movimento natural.</p>
                     <p>A partir de R$ 50,00</p>
-                    <a href="agendamento.html" class="btn-agendar">Agendar agora</a>
+                    <a href="agendamento.html?servico=Escova&valor=50" class="btn-agendar">Agendar agora</a>
                 </div>
 
                 <div class="card">
                     <img src="../img/progressiva.jpg" alt="Progressiva">
                     <h3>Progressiva</h3>
-                    <p>
-                        Redução de volume e controle do frizz, deixando os fios mais lisos,
-                        disciplinados e com brilho intenso.
-                    </p>
+                    <p>Redução de volume e controle do frizz.</p>
                     <p>A partir de R$ 100,00</p>
-                    <a href="agendamento.html" class="btn-agendar">Agendar agora</a>
+                    <a href="agendamento.html?servico=Progressiva&valor=100" class="btn-agendar">Agendar agora</a>
                 </div>
 
                 <div class="card">
                     <img src="../img/botox.jpg" alt="Botox Capilar">
                     <h3>Botox Capilar</h3>
-                    <p>
-                        Tratamento de hidratação profunda que devolve maciez, brilho e vida
-                        aos fios danificados.
-                    </p>
+                    <p>Hidratação profunda para os fios.</p>
                     <p>A partir de R$ 90,00</p>
-                    <a href="agendamento.html" class="btn-agendar">Agendar agora</a>
+                    <a href="agendamento.html?servico=Botox&valor=90" class="btn-agendar">Agendar agora</a>
                 </div>
 
             </div>
@@ -99,7 +83,6 @@
 
     <footer class="footer">
         <div class="footer-container">
-
             <div class="footer-brand">
                 <h3>Mulher Virtuosa</h3>
                 <p>Realçando sua beleza com carinho, cuidado e profissionalismo.</p>
@@ -117,27 +100,23 @@
 
             <div class="footer-contato">
                 <h4>Contato</h4>
-                <p><a href="https://maps.app.goo.gl/maNV1S6E7wdSXcS67" target="_blank">
+                <p>
+                    <a href="https://maps.app.goo.gl/maNV1S6E7wdSXcS67" target="_blank">
                         Rua Gabriel Netuze Peres, 194 – Box 30<br>
                         Santo Amaro – São Paulo/SP
                     </a>
                 </p>
                 <p>CEP: 04743-020</p>
             </div>
-
         </div>
 
-        <div class="footer-map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5008.168539418369!2d-46.70335006879178!3d-23.652300810440106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5056b01c1975%3A0x834b3eef1d054483!2sGaleria%20Shop!5e0!3m2!1spt-BR!2sbr!4v1772168401513!5m2!1spt-BR!2sb"
-                width="100%" height="110" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
         <div class="footer-bottom">
             <p>© 2026 Mulher Virtuosa - Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script src="../script.js"></script>
+
 </body>
 
 </html>
